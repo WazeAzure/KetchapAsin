@@ -40,10 +40,10 @@ client.on('guildMemberAdd',(member)=>{
    Kunjungi <#771368451703963658> untuk ide untuk pengembangan bot atau berkontribusi
   )
 
-   member.guild.channels.cache.find(ch => ch.name ==='members-logs').send(`Selamat Datang **${member}** di Smapda Tech Server, kamu memiliki username _**${member.user.tag}**_ Silahkan kunjungi <#741632073282093060> Untuk Ngobrol Bareng dan melihat info server `);
+   member.guild.channels.cache.find(ch => ch.name ==='members-logs').send(`Selamat Datang **${member}** di Smapda Tech Server, kamu memiliki username _**${member.user.tag}**`);
 
 
 
-})
+});
 
 client.login(config.BOT_TOKEN);
