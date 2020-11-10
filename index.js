@@ -28,4 +28,22 @@ client.on("message", function(message){
 	}
 });
 
+client.on('guildMemberAdd',(member)=>{
+    const channel =  member.guild.channels.cache.find(ch => ch.name === 'general').send(`Selamat Datang di Server Smapda Tech ${member}!!\n
+ Server Info :
+   Kunjungi <#771373087954042910> untuk denger lagu!
+   Kunjungi <#741632073282093060> untuk diskusi bareng lewat teks sama temen - temen lainnya
+   Kunjungi <#771368338290245682> untuk share memes! High Quality memes ya!
+   Kunjungi <#771373231767552000> untuk course - course menarik lainnya
+   Kunjungi <#771367332927766538> untuk melihat info - info penting
+   Kunjungi <#771368451703963658> untuk temen - temen yang kesulitan memahami sebuah kasus
+   Kunjungi <#771368451703963658> untuk ide untuk pengembangan bot atau berkontribusi
+  )
+
+   member.guild.channels.cache.find(ch => ch.name ==='members-logs').send(`Selamat Datang **${member}** di Smapda Tech Server, kamu memiliki username _**${member.user.tag}**_ Silahkan kunjungi <#741632073282093060> Untuk Ngobrol Bareng dan melihat info server `);
+
+
+
+})
+
 client.login(config.BOT_TOKEN);
